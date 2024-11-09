@@ -7,6 +7,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { HospitalesapiComponent } from './components/hospitalesapi/hospitalesapi.component';
 import { appRoutingProvider, routing } from './app.routing';
 import { provideHttpClient } from '@angular/common/http';
+import { ServiceHospitales } from './services/service.hospitales';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { provideHttpClient } from '@angular/common/http';
     HospitalesapiComponent,
   ],
   imports: [BrowserModule, routing],
-  providers: [appRoutingProvider, provideHttpClient()],
+  providers: [appRoutingProvider, ServiceHospitales, provideHttpClient()],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
